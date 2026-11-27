@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
 <title>贺辛 DC · Dictionnaire chinois, français, malgache</title>
+<meta name="description" content="Dictionnaire chinois, français et malgache pour Android : HSK 1 à 6, quiz, révision et prononciation.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="贺辛 DC · Dictionnaire chinois, français, malgache">
+<meta property="og:description" content="Apprends le chinois avec le français et le malgache. HSK 1 à 6, quiz, révision et prononciation. Gratuit sur Android.">
+<meta property="og:image" content="https://rdnom12-prog.github.io/Hexin-dc/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="https://rdnom12-prog.github.io/Hexin-dc/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +26,16 @@ body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.5 "Figtree",syste
 .hz{font-family:"Noto Serif SC","Songti SC",serif;font-weight:900}
 .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
 svg.i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
-a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0px)}
-.bar{height:66px;display:flex;align-items:center;gap:12px}
+.bar{height:66px;display:flex;align-items:center;gap:10px}
 .logo{position:relative;width:44px;height:44px;border-radius:12px;background:var(--gr);color:var(--on);display:grid;place-items:center;font-size:24px;overflow:hidden;flex:none}
 .logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--card)}
 .word{font-size:24px;font-weight:800;letter-spacing:-.5px;flex:1}.word b{color:var(--red)}.word span{color:var(--gr)}
-.links{display:none;gap:6px;align-items:center}.links a{color:var(--tx);text-decoration:none;font-weight:700;padding:8px 12px;border-radius:99px}.links a:hover{background:var(--pg)}
+.links{display:none;gap:4px;align-items:center}.links a{color:var(--tx);text-decoration:none;font-weight:700;padding:8px 12px;border-radius:99px}.links a:hover{background:var(--pg)}
+.tools{display:flex;gap:2px;background:var(--pg);border-radius:99px;padding:3px}
+.tools button{border:0;background:none;font:inherit;font-weight:800;font-size:14px;color:var(--grd);padding:6px 11px;border-radius:99px;cursor:pointer}
+.tools button[aria-pressed="true"]{background:var(--gr);color:var(--on)}
 .burger{background:none;border:0;color:var(--tx);padding:8px;cursor:pointer}
 .pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gr);color:var(--on);font:inherit;font-weight:700;border:0;border-radius:99px;padding:13px 24px;text-decoration:none;cursor:pointer}
 .pill.gold{background:var(--gold);color:#2b1d00}.pill.out{background:transparent;color:var(--gr);border:2px solid var(--gr)}.pill.wh{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
@@ -36,10 +48,10 @@ main{padding:20px 0 40px;display:grid;gap:30px}
 .hero p.lead{margin:0;opacity:.9;max-width:30em}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .vn{margin:12px 0 0;opacity:.75;font-size:14px}
-.stats{display:flex;gap:22px;margin-top:22px}.stats b{display:block;font-size:20px}.stats span{font-size:13px;opacity:.75}
+.stats{display:flex;gap:22px;margin-top:22px;flex-wrap:wrap}.stats b{display:block;font-size:20px}.stats span{font-size:13px;opacity:.75}
 .entry{position:relative;background:var(--card);color:var(--tx);border-radius:22px;padding:20px 22px;max-width:320px;box-shadow:0 18px 40px rgba(0,0,0,.28)}
 .entry small{color:var(--mut);font-weight:700}.entry .hz{display:block;font-size:76px;line-height:1.1}
-.entry .py{color:var(--gr);font-size:21px;font-weight:700;margin:0}.entry p{margin:6px 0 0;color:var(--mut);font-size:15px}
+.entry .py{color:var(--gr);font-size:21px;font-weight:700;margin:0}.entry p{margin:4px 0 0;color:var(--mut);font-size:15px}
 .sec{margin:0 0 14px;font-size:26px;font-weight:800;letter-spacing:-.4px}
 .fgrid,.igrid{display:grid;gap:20px}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:24px;overflow:hidden}
@@ -50,12 +62,20 @@ main{padding:20px 0 40px;display:grid;gap:30px}
 .c3{background:linear-gradient(155deg,#5b6fd6,#1f2760)}.c4{background:linear-gradient(155deg,#b8527e,#4a1738)}
 .strip{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px}
 .strip span{color:var(--mut);font-size:15px;line-height:1.35}
-.tag{flex:none;background:var(--pg);color:var(--grd);border-radius:99px;padding:6px 14px;font-weight:700;font-size:14px}
+.tag{flex:none;background:var(--pg);color:var(--grd)!important;border-radius:99px;padding:6px 14px;font-weight:700;font-size:14px!important}
+.shots{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 14px}
+.ph{flex:none;width:210px;scroll-snap-align:center;margin:0;border:6px solid #14201c;border-radius:30px;overflow:hidden;background:#000}.ph img{display:block;width:100%;height:auto}
 .box{padding:22px}.box h3{margin:0 0 12px;font-size:22px;font-weight:800}
 .box ul{margin:0;padding-left:20px;color:var(--mut)}.box li{margin:5px 0}
 ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
 ol.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;align-items:start;margin:12px 0}
 ol.steps li:before{content:counter(s);width:30px;height:30px;border-radius:50%;background:var(--pg);color:var(--grd);font-weight:800;display:grid;place-items:center}
+details.card summary{cursor:pointer;font-weight:700;padding:16px 20px;list-style:none}
+details.card summary::-webkit-details-marker{display:none}
+details.card summary::after{content:"+";float:right;color:var(--gr);font-size:22px;line-height:1}
+details[open].card summary::after{content:"–"}
+details.card p{margin:0;padding:0 20px 18px;color:var(--mut)}
+.faqs{display:grid;gap:12px}
 .ver{padding:12px 0;border-top:1px solid var(--bd)}.ver:first-child{border-top:0;padding-top:0}.ver b{display:block}.ver p{margin:0;color:var(--mut);font-size:15px}
 .don{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--py);border-radius:18px;padding:14px 16px;margin-top:14px}
 .don small{display:block;color:var(--mut)}.don b{font-size:21px}
@@ -76,7 +96,7 @@ body.open .scrim{opacity:1;pointer-events:auto}body.open .drawer{transform:none}
  .hero{grid-template-columns:1.2fr 1fr;align-items:center;padding:52px 48px;gap:40px;border-radius:36px}
  .hero h1{font-size:48px}.entry{justify-self:center;transform:rotate(-3deg);max-width:340px}
  .igrid{grid-template-columns:1fr 1fr}.igrid .wide{grid-column:1/-1}
- main{gap:44px;padding-top:28px}.fh{height:230px}.fh h3{font-size:40px}
+ main{gap:44px;padding-top:28px}.fh{height:230px}.fh h3{font-size:40px}.ph{width:240px}
 }
 @media (prefers-reduced-motion:reduce){.drawer,.scrim{transition:none}}
 </style>
@@ -97,131 +117,211 @@ body.open .scrim{opacity:1;pointer-events:auto}body.open .drawer{transform:none}
   <div class="logo hz" lang="zh">贺<img src="logo.png" alt="Logo 贺辛 DC" onerror="this.remove()"></div>
   <div class="word"><b>贺辛</b> <span>DC</span></div>
   <nav class="links" aria-label="Navigation">
-    <a href="#fonctions">Fonctions</a><a href="#installer">Installation</a><a href="#versions">Versions</a><a href="#soutenir">Soutenir</a><a href="#contact">Contact</a>
-    <a class="pill" href="#telecharger" style="color:var(--on)">Télécharger</a>
+    <a href="#fonctions" data-i="nav_f"></a><a href="#installer" data-i="nav_i"></a><a href="#versions" data-i="nav_v"></a><a href="#soutenir" data-i="nav_s"></a><a href="#contact" data-i="nav_c"></a>
+    <a class="pill" href="#telecharger" data-i="dl" style="color:var(--on)"></a>
   </nav>
-  <button class="burger" id="open" aria-label="Ouvrir le menu" aria-expanded="false"><svg class="i" style="width:30px;height:30px"><use href="#mn"/></svg></button>
+  <div class="tools" role="group" aria-label="Langue"><button data-l="fr">FR</button><button data-l="mg">MG</button></div>
+  <button class="burger" id="open" aria-label="Menu" aria-expanded="false"><svg class="i" style="width:30px;height:30px"><use href="#mn"/></svg></button>
 </div></header>
 
 <div class="scrim" id="scrim"></div>
 <nav class="drawer" id="drawer" aria-label="Menu">
-  <div class="dh">贺辛 DC<button id="close" aria-label="Fermer le menu"><svg class="i" style="width:30px;height:30px"><use href="#x"/></svg></button></div>
+  <div class="dh">贺辛 DC<button id="close" aria-label="Fermer"><svg class="i" style="width:30px;height:30px"><use href="#x"/></svg></button></div>
   <div class="nav">
-    <a class="m" href="#telecharger"><svg class="i" style="color:var(--gr)"><use href="#dl"/></svg>Télécharger l’app</a>
-    <a class="m" href="#fonctions"><svg class="i"><use href="#bk"/></svg>Fonctions</a>
-    <a class="m" href="#installer"><svg class="i"><use href="#ls"/></svg>Installation</a>
-    <a class="m" href="#versions"><svg class="i"><use href="#ck"/></svg>Versions</a>
-    <a class="m y" href="#soutenir"><svg class="i"><use href="#ht"/></svg>Soutenir le projet</a>
-    <a class="m g" href="#contact"><svg class="i"><use href="#ch"/></svg>Contact</a>
-    <h4>Pages officielles</h4>
+    <a class="m" href="#telecharger"><svg class="i" style="color:var(--gr)"><use href="#dl"/></svg><span data-i="dl_app"></span></a>
+    <a class="m" href="#fonctions"><svg class="i"><use href="#bk"/></svg><span data-i="nav_f"></span></a>
+    <a class="m" href="#installer"><svg class="i"><use href="#ls"/></svg><span data-i="nav_i"></span></a>
+    <a class="m" href="#versions"><svg class="i"><use href="#ck"/></svg><span data-i="nav_v"></span></a>
+    <a class="m y" href="#soutenir"><svg class="i"><use href="#ht"/></svg><span data-i="sup_nav"></span></a>
+    <a class="m g" href="#contact"><svg class="i"><use href="#ch"/></svg><span data-i="nav_c"></span></a>
+    <h4 data-i="official"></h4>
     <a class="m" href="https://www.facebook.com/HASINANT" target="_blank" rel="noopener">Facebook</a>
     <a class="m" href="https://wa.me/261333665708" target="_blank" rel="noopener">WhatsApp</a>
-    <a class="pill" href="#telecharger">Télécharger l’APK</a>
+    <a class="pill" href="#telecharger" data-i="dl_apk"></a>
   </div>
 </nav>
 
 <main class="wrap">
-  <div class="warn" id="fb">Tu es dans le navigateur de Facebook. Pour télécharger l’APK, ouvre cette page dans ton navigateur : menu ⋮ ou ···, puis « Ouvrir dans le navigateur ».</div>
+  <div class="warn" id="fb" data-i="warn"></div>
 
   <section class="hero" id="telecharger">
     <span class="hz big" lang="zh" aria-hidden="true">贺辛</span>
     <div style="position:relative">
       <div class="logo hz" lang="zh">贺<img src="logo.png" alt="" onerror="this.remove()"></div>
-      <h1>Apprends le chinois avec le français et le malgache</h1>
-      <p class="lead">Un dictionnaire pour Android, avec les niveaux HSK 1 à 6, un quiz, de la révision et des exercices de prononciation.</p>
+      <h1 data-i="h1"></h1>
+      <p class="lead" data-i="lead"></p>
       <div class="cta">
-        <a class="pill gold" id="dl" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#dl"/></svg>Télécharger</a>
-        <a class="pill wh" href="#fonctions">Voir les fonctions</a>
+        <a class="pill gold" id="dl" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#dl"/></svg><span id="dlt"></span></a>
+        <a class="pill wh" href="#fonctions" data-i="see"></a>
       </div>
       <p class="vn" id="vn"></p>
-      <div class="stats"><div><b>HSK 1 à 6</b><span>niveaux</span></div><div><b>3 langues</b><span>chinois, français, malgache</span></div><div><b>Gratuit</b><span>pour tous</span></div></div>
+      <div class="stats"><div><b>HSK 1–6</b><span data-i="st1"></span></div><div><b data-i="st2b"></b><span data-i="st2"></span></div><div><b data-i="st3b"></b><span data-i="st3"></span></div></div>
     </div>
-    <div class="entry" aria-hidden="true" style="position:relative">
-      <small>Mot du jour</small><span class="hz" lang="zh">词典</span><p class="py">cídiǎn</p>
-      <p>nom<br>Français : dictionnaire<br>Malgache : rakibolana</p>
+    <div class="entry" aria-hidden="true">
+      <small data-i="wod"></small><span class="hz" lang="zh">词典</span><p class="py">cídiǎn</p>
+      <p data-i="noun"></p><p data-i="enf"></p><p data-i="enm"></p>
     </div>
   </section>
 
+  <section id="apercu" hidden>
+    <h2 class="sec" data-i="shots_t"></h2>
+    <div class="shots" id="shots"></div>
+  </section>
+
   <section id="fonctions">
-    <h2 class="sec">Ce que tu trouves dans l’application</h2>
+    <h2 class="sec" data-i="sec_f"></h2>
     <div class="fgrid">
-      <div class="card"><div class="fh c1"><span class="hz" lang="zh">词典</span><h3>Dictionnaire</h3></div>
-        <div class="strip"><span>Hanzi, pinyin, français et malgache, par niveau et par thème.</span><span class="tag">HSK 1 à 6</span></div></div>
-      <div class="card"><div class="fh c2"><span class="hz" lang="zh">语法</span><h3>Grammaire</h3></div>
-        <div class="strip"><span>Les règles essentielles, les chiffres et les classificateurs.</span><span class="tag">Leçons</span></div></div>
-      <div class="card"><div class="fh c3"><span class="hz" lang="zh">测验</span><h3>Quiz et révision</h3></div>
-        <div class="strip"><span>Teste-toi, puis revois les mots que tu as oubliés.</span><span class="tag">Quiz</span></div></div>
+      <div class="card"><div class="fh c1"><span class="hz" lang="zh">词典</span><h3 data-i="f1"></h3></div>
+        <div class="strip"><span data-i="f1d"></span><span class="tag">HSK 1–6</span></div></div>
+      <div class="card"><div class="fh c2"><span class="hz" lang="zh">语法</span><h3 data-i="f2"></h3></div>
+        <div class="strip"><span data-i="f2d"></span><span class="tag" data-i="f2t"></span></div></div>
+      <div class="card"><div class="fh c3"><span class="hz" lang="zh">测验</span><h3 data-i="f3"></h3></div>
+        <div class="strip"><span data-i="f3d"></span><span class="tag">Quiz</span></div></div>
       <div class="card"><div class="fh c4"><span class="hz" lang="zh">跟读</span><h3>Shadowing</h3></div>
-        <div class="strip"><span>Écoute la voix chinoise et répète pour la prononciation.</span><span class="tag">Audio</span></div></div>
+        <div class="strip"><span data-i="f4d"></span><span class="tag">Audio</span></div></div>
     </div>
   </section>
 
   <section class="igrid">
-    <div class="card box"><h3>Aussi dans l’application</h3>
-      <ul><li>Mot du jour et phrases d’exemple</li><li>Favoris, historique et listes personnelles</li><li>Statistiques de progression par niveau</li><li>Mode clair ou sombre, 5 couleurs d’accent</li></ul></div>
-    <div class="card box" id="installer"><h3>Installer l’APK</h3>
-      <ol class="steps">
-        <li><span>Appuie sur « Télécharger » et attends la fin du téléchargement.</span></li>
-        <li><span>Ouvre le fichier. Si Android le demande, autorise l’installation depuis cette source.</span></li>
-        <li><span>Appuie sur « Installer », puis ouvre l’application.</span></li>
-      </ol></div>
-    <div class="card box" id="versions"><h3>Historique des versions</h3><div id="log"></div></div>
-    <div class="card box" id="soutenir"><h3>Soutenir le projet</h3>
-      <p style="margin:0;color:var(--mut)">L’application est gratuite. Un don aide à la faire évoluer.</p><div id="don"></div></div>
-    <div class="card box wide" id="contact"><h3>Contact</h3>
+    <div class="card box"><h3 data-i="also_t"></h3>
+      <ul><li data-i="a1"></li><li data-i="a2"></li><li data-i="a3"></li><li data-i="a4"></li></ul></div>
+    <div class="card box" id="installer"><h3 data-i="inst_t"></h3>
+      <ol class="steps"><li><span data-i="s1"></span></li><li><span data-i="s2"></span></li><li><span data-i="s3"></span></li></ol></div>
+    <div class="card box wide"><h3 data-i="faq_t"></h3>
+      <div class="faqs">
+        <details class="card"><summary data-i="q1"></summary><p data-i="r1"></p></details>
+        <details class="card"><summary data-i="q2"></summary><p data-i="r2"></p></details>
+        <details class="card"><summary data-i="q3"></summary><p data-i="r3"></p></details>
+      </div></div>
+    <div class="card box" id="versions"><h3 data-i="ver_t"></h3><div id="log"></div></div>
+    <div class="card box" id="soutenir"><h3 data-i="sup_t"></h3>
+      <p style="margin:0;color:var(--mut)" data-i="sup_p"></p><div id="don"></div></div>
+    <div class="card box wide" id="contact"><h3 data-i="nav_c"></h3>
       <div class="row">
         <a class="pill" href="https://wa.me/261333665708" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="pill out" href="https://www.facebook.com/HASINANT" target="_blank" rel="noopener">Page Facebook</a>
+        <a class="pill out" href="https://www.facebook.com/HASINANT" target="_blank" rel="noopener">Facebook</a>
+        <a class="pill out" id="rep" href="#" target="_blank" rel="noopener" data-i="report"></a>
       </div></div>
   </section>
 </main>
-<footer>贺辛 DC, un dictionnaire fait pour les apprenants.</footer>
+<footer data-i="foot"></footer>
 
 <script>
-/* ====== À MODIFIER ====== */
-const CONFIG = {
-  apkUrl: "#",   /* lien de téléchargement de l'APK */
-  version: "2.2.0",
-  taille: "",    /* ex. "12 Mo" (optionnel) */
-  mises_a_jour: [
-    {v: "2.2.0", date: "27/11/2026", notes: "Version actuelle."}
-    /* Ajoute une ligne à chaque nouvelle version, la plus récente en premier */
-  ],
-  dons: [
-    {nom: "Airtel Money", num: "033 366 5708"}
-  ]
+/* Le contenu des versions, de l'APK et des captures vient de version.json.
+   Ce bloc ne sert que de secours si version.json est introuvable. */
+const FALLBACK = {version:"2.2.0", apk:"", taille:"", captures:[],
+  historique:[{v:"2.2.0", date:"27/11/2026", fr:"Version actuelle.", mg:"Version ankehitriny."}]};
+const DONS = [{nom:"Airtel Money", num:"033 366 5708"}];   /* moyens de don */
+const REPO = "rdnom12-prog/Hexin-dc";
+
+const T = {
+fr:{nav_f:"Fonctions",nav_i:"Installation",nav_v:"Versions",nav_s:"Soutenir",nav_c:"Contact",dl:"Télécharger",soon:"Bientôt disponible",
+dl_app:"Télécharger l’app",sup_nav:"Soutenir le projet",official:"Pages officielles",dl_apk:"Télécharger l’APK",
+h1:"Apprends le chinois avec le français et le malgache",
+lead:"Un dictionnaire pour Android, avec les niveaux HSK 1 à 6, un quiz, de la révision et des exercices de prononciation.",
+see:"Voir les fonctions",st1:"niveaux",st2b:"3 langues",st2:"chinois, français, malgache",st3b:"Gratuit",st3:"pour tous",
+wod:"Mot du jour",noun:"nom",enf:"Français : dictionnaire",enm:"Malgache : rakibolana",
+shots_t:"Aperçu de l’application",sec_f:"Ce que tu trouves dans l’application",
+f1:"Dictionnaire",f1d:"Hanzi, pinyin, français et malgache, par niveau et par thème.",
+f2:"Grammaire",f2d:"Les règles essentielles, les chiffres et les classificateurs.",f2t:"Leçons",
+f3:"Quiz et révision",f3d:"Teste-toi, puis revois les mots que tu as oubliés.",f4d:"Écoute la voix chinoise et répète pour la prononciation.",
+also_t:"Aussi dans l’application",a1:"Mot du jour et phrases d’exemple",a2:"Favoris, historique et listes personnelles",a3:"Statistiques de progression par niveau",a4:"Mode clair ou sombre, 5 couleurs d’accent",
+inst_t:"Installer l’APK",s1:"Appuie sur « Télécharger » et attends la fin du téléchargement.",s2:"Ouvre le fichier. Si Android le demande, autorise l’installation depuis cette source.",s3:"Appuie sur « Installer », puis ouvre l’application.",
+faq_t:"Questions fréquentes",
+q1:"Android affiche un avertissement, est-ce sûr ?",r1:"C’est normal pour un APK installé hors du Play Store. Tu peux continuer si le fichier vient de cette page.",
+q2:"Le téléchargement ne démarre pas depuis Facebook",r2:"Ouvre la page dans ton navigateur : menu ⋮ ou ···, puis « Ouvrir dans le navigateur ».",
+q3:"Comment savoir qu’une nouvelle version existe ?",r3:"La dernière version s’affiche ici, et l’application te prévient quand une mise à jour est disponible.",
+ver_t:"Historique des versions",sup_t:"Soutenir le projet",sup_p:"L’application est gratuite. Un don aide à la faire évoluer.",
+copy:"Copier",copied:"Copié",nonum:"Numéro bientôt disponible",report:"Signaler un problème",
+foot:"贺辛 DC, un dictionnaire fait pour les apprenants.",
+warn:"Tu es dans le navigateur de Facebook. Pour télécharger l’APK, ouvre cette page dans ton navigateur : menu ⋮ ou ···, puis « Ouvrir dans le navigateur ».",
+vn:function(v,t,n){return "Version "+v+(t?", "+t:"")+", fichier APK pour Android."+(n?" "+n+" téléchargements.":"");},
+msg:function(v){return "Bonjour, j’ai un problème avec 贺辛 DC (version "+v+") : ";}},
+mg:{nav_f:"Endri-javatra",nav_i:"Fametrahana",nav_v:"Fanavaozana",nav_s:"Manohana",nav_c:"Fifandraisana",dl:"Ampidino",soon:"Tsy ho ela",
+dl_app:"Ampidino ny app",sup_nav:"Manohana ny tetikasa",official:"Pejy ofisialy",dl_apk:"Ampidino ny APK",
+h1:"Mianara sinoa amin’ny teny frantsay sy malagasy",
+lead:"Rakibolana ho an’ny Android, misy ny haavo HSK 1 hatramin’ny 6, fanadinana, famerenana lesona ary fanazaran-tena amin’ny fanononana.",
+see:"Jereo ny endri-javatra",st1:"haavo",st2b:"3 fiteny",st2:"sinoa, frantsay, malagasy",st3b:"Maimaim-poana",st3:"ho an’ny rehetra",
+wod:"Teny androany",noun:"anarana",enf:"Frantsay : dictionnaire",enm:"Malagasy : rakibolana",
+shots_t:"Sary avy ao amin’ny application",sec_f:"Ny ao anatin’ny application",
+f1:"Rakibolana",f1d:"Hanzi, pinyin, frantsay ary malagasy, arakaraka ny haavo sy ny lohahevitra.",
+f2:"Fitsipi-pitenenana",f2d:"Ny fitsipika fototra, ny isa ary ny teny mpanisa (classificateurs).",f2t:"Lesona",
+f3:"Fanadinana sy famerenana",f3d:"Andramo ny tenanao, avy eo averina ny teny hadinoinao.",f4d:"Henoy ny feon’ny sinoa ary averino mba hanatsarana ny fanononana.",
+also_t:"Ao anatin’ny application koa",a1:"Teny androany sy ohatra fehezanteny",a2:"Ankafizina, tantara ary lisitra manokana",a3:"Statistika momba ny fandrosoana isaky ny haavo",a4:"Fomba mazava na maizina, loko 5",
+inst_t:"Hametraka ny APK",s1:"Tsindrio ny « Ampidino » ary andraso ho vita ny famindrana.",s2:"Sokafy ilay rakitra. Raha mangataka ny Android, avelao ny fametrahana avy amin’ity loharano ity.",s3:"Tsindrio ny « Install », avy eo sokafy ny application.",
+faq_t:"Fanontaniana mahazatra",
+q1:"Misy hafatra mampitandrina ny Android, azo antoka ve izany ?",r1:"Mahazatra izany rehefa tsy avy amin’ny Play Store ny APK. Afaka manohy ianao raha avy amin’ity pejy ity ny rakitra.",
+q2:"Tsy manomboka ny fampidinana avy amin’ny Facebook",r2:"Sokafy amin’ny navigateur ny pejy : menu ⋮ na ···, avy eo « Ouvrir dans le navigateur ».",
+q3:"Ahoana no ahafantarana fa misy version vaovao ?",r3:"Hiseho eto ny version farany, ary hampahafantatra anao ny application rehefa misy fanavaozana.",
+ver_t:"Tantaran’ny version",sup_t:"Manohana ny tetikasa",sup_p:"Maimaim-poana ny application. Manampy amin’ny fampandrosoana azy ny fanomezana.",
+copy:"Adikao",copied:"Voaadika",nonum:"Tsy ho ela ny laharana",report:"Ampahafantaro ny olana",
+foot:"贺辛 DC, rakibolana natao ho an’ny mpianatra.",
+warn:"Ao amin’ny navigateur Facebook ianao. Mba hampidina ny APK, sokafy amin’ny navigateur ity pejy ity : menu ⋮ na ···, avy eo « Ouvrir dans le navigateur ».",
+vn:function(v,t,n){return "Version "+v+(t?", "+t:"")+", rakitra APK ho an’ny Android."+(n?" "+n+" fampidinana.":"");},
+msg:function(v){return "Salama, manana olana amin’ny 贺辛 DC aho (version "+v+") : ";}}
 };
-/* ======================== */
 
-const dl = document.getElementById("dl");
-if (CONFIG.apkUrl && CONFIG.apkUrl !== "#") { dl.href = CONFIG.apkUrl; }
-else { dl.removeAttribute("href"); dl.lastChild.textContent = "Bientôt disponible"; dl.style.opacity = ".7"; dl.style.pointerEvents = "none"; }
-document.getElementById("vn").textContent = "Version " + CONFIG.version + (CONFIG.taille ? ", " + CONFIG.taille : "") + ", fichier APK pour Android.";
+let lang = "fr", DATA = FALLBACK, apk = "", size = "", count = 0;
+try { const s = localStorage.getItem("lang"); if (s === "mg" || s === "fr") lang = s; else if (/^mg/i.test(navigator.language)) lang = "mg"; } catch (e) {}
+
+function render(){
+  const t = T[lang];
+  document.documentElement.lang = lang === "mg" ? "mg" : "fr";
+  document.querySelectorAll("[data-i]").forEach(function(e){ e.textContent = t[e.dataset.i]; });
+  document.querySelectorAll(".tools button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.l === lang); });
+  const dl = document.getElementById("dl");
+  if (apk) { dl.href = apk; dl.style.opacity = ""; dl.style.pointerEvents = ""; document.getElementById("dlt").textContent = t.dl; }
+  else { dl.removeAttribute("href"); dl.style.opacity = ".7"; dl.style.pointerEvents = "none"; document.getElementById("dlt").textContent = t.soon; }
+  document.getElementById("vn").textContent = t.vn(DATA.version, DATA.taille || size, count);
+  document.getElementById("rep").href = "https://wa.me/261333665708?text=" + encodeURIComponent(t.msg(DATA.version));
+  const log = document.getElementById("log"); log.textContent = "";
+  (DATA.historique || []).forEach(function(m){
+    const d = document.createElement("div"); d.className = "ver"; d.innerHTML = "<b></b><p></p>";
+    d.children[0].textContent = "Version " + m.v + ", " + m.date;
+    d.children[1].textContent = m[lang] || m.fr || "";
+    log.appendChild(d);
+  });
+  const don = document.getElementById("don"); don.textContent = "";
+  DONS.forEach(function(x){
+    const r = document.createElement("div"); r.className = "don";
+    r.innerHTML = '<div><small></small><b></b></div><button class="pill" type="button"></button>';
+    r.querySelector("small").textContent = x.nom;
+    r.querySelector("b").textContent = x.num || t.nonum;
+    const b = r.querySelector("button"); b.textContent = t.copy;
+    if (!x.num) b.remove();
+    else b.onclick = function(){
+      function ok(){ b.textContent = t.copied; setTimeout(function(){ b.textContent = t.copy; }, 1500); }
+      try { navigator.clipboard.writeText(x.num).then(ok, ok); } catch (e) { ok(); }
+    };
+    don.appendChild(r);
+  });
+}
+function shots(){
+  const c = DATA.captures || [], box = document.getElementById("shots");
+  document.getElementById("apercu").hidden = !c.length;
+  box.textContent = "";
+  c.forEach(function(src, i){
+    const f = document.createElement("figure"); f.className = "ph";
+    const im = document.createElement("img"); im.src = src; im.loading = "lazy"; im.alt = "Capture " + (i + 1);
+    f.appendChild(im); box.appendChild(f);
+  });
+}
+document.querySelectorAll(".tools button").forEach(function(b){
+  b.onclick = function(){ lang = b.dataset.l; try { localStorage.setItem("lang", lang); } catch (e) {} render(); };
+});
 if (/FBAN|FBAV|FB_IAB/i.test(navigator.userAgent)) document.getElementById("fb").style.display = "block";
+render(); shots();
 
-const log = document.getElementById("log");
-CONFIG.mises_a_jour.forEach(function(m){
-  const d = document.createElement("div"); d.className = "ver";
-  d.innerHTML = "<b></b><p></p>";
-  d.children[0].textContent = "Version " + m.v + ", " + m.date;
-  d.children[1].textContent = m.notes;
-  log.appendChild(d);
-});
-
-const don = document.getElementById("don");
-CONFIG.dons.forEach(function(x){
-  const r = document.createElement("div"); r.className = "don";
-  r.innerHTML = '<div><small></small><b></b></div><button class="pill" type="button">Copier</button>';
-  r.querySelector("small").textContent = x.nom;
-  r.querySelector("b").textContent = x.num || "Numéro bientôt disponible";
-  const b = r.querySelector("button");
-  if (!x.num) { b.remove(); }
-  else b.onclick = function(){
-    function ok(){ b.textContent = "Copié"; setTimeout(function(){ b.textContent = "Copier"; }, 1500); }
-    try { navigator.clipboard.writeText(x.num).then(ok, ok); } catch (e) { ok(); }
-  };
-  don.appendChild(r);
-});
+fetch("version.json?" + Date.now()).then(function(r){ return r.json(); }).then(function(d){
+  DATA = d; apk = d.apk || ""; render(); shots(); return fetch("https://api.github.com/repos/" + REPO + "/releases");
+}).catch(function(){ return fetch("https://api.github.com/repos/" + REPO + "/releases"); })
+.then(function(r){ return r.json(); }).then(function(rs){
+  if (!Array.isArray(rs)) return;
+  rs.forEach(function(x){ (x.assets || []).forEach(function(a){ count += a.download_count || 0; }); });
+  const last = rs[0] && (rs[0].assets || []).filter(function(a){ return /\.apk$/i.test(a.name); })[0];
+  if (last && !apk) { apk = last.browser_download_url; size = (last.size / 1048576).toFixed(1).replace(".", ",") + " Mo"; }
+  render();
+}).catch(function(){});
 
 const body = document.body, openB = document.getElementById("open");
 function toggle(o){ body.classList.toggle("open", o); openB.setAttribute("aria-expanded", o); }
