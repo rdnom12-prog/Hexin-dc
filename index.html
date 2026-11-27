@@ -3,141 +3,232 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>贺辛 DC · Dico Lingua — Télécharger</title>
 <meta name="robots" content="noindex">
+<title>贺辛 DC · Dictionnaire chinois, français, malgache</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
 <style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
---bg:#faf7f2;--card:#fff;--tx:#1f1b16;--mut:#6b645a;--ac:#c8352b;--ac2:#fbe9e7;--bd:#e8e1d6}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15130f;--card:#201d18;--tx:#f3eee6;--mut:#a39b8d;--ac:#ef6a5e;--ac2:#3a2420;--bd:#332f28}}
-:root[data-theme="dark"]{--bg:#15130f;--card:#201d18;--tx:#f3eee6;--mut:#a39b8d;--ac:#ef6a5e;--ac2:#3a2420;--bd:#332f28}
-*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
-.hero{text-align:center;padding:28px 8px 8px}
-.logo{width:84px;height:84px;margin:0 auto 14px;border-radius:22px;background:var(--ac);color:#fff;display:grid;place-items:center;font-size:44px;font-weight:700}
-h1{margin:0;font-size:26px}.sub{color:var(--mut);margin:6px 0 0}
-.badge{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:99px;background:var(--ac2);color:var(--ac);font-size:13px;font-weight:600}
-.btn{display:block;text-align:center;text-decoration:none;font-weight:700;padding:15px 18px;border-radius:14px;margin-top:18px;background:var(--ac);color:#fff;font-size:17px}
-.btn.alt{background:transparent;color:var(--ac);border:2px solid var(--ac)}
-section{margin-top:26px}h2{font-size:19px;margin:0 0 10px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 16px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.grid .card{padding:12px}.grid b{display:block}.grid span{color:var(--mut);font-size:14px}
-ol{margin:0;padding-left:20px}li{margin:6px 0}
-.warn{display:none;background:#fff3cd;color:#5c4400;border-radius:12px;padding:12px 14px;margin-top:16px;font-size:14px}
-.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--bd)}
-.row:first-of-type{border-top:0}.row small{color:var(--mut);display:block}
-.row button{border:1px solid var(--ac);background:transparent;color:var(--ac);border-radius:10px;padding:7px 12px;font-weight:600;cursor:pointer}
-.ver{margin:0 0 4px;font-weight:700}.notes{color:var(--mut);margin:0;font-size:15px}
-footer{text-align:center;color:var(--mut);font-size:13px;margin-top:34px}
+:root{box-sizing:border-box;--bg:#f2f0e9;--card:#fff;--tx:#1c211f;--mut:#6b7370;--bd:#d9dcd3;--gr:#12805f;--on:#fff;--grd:#0c5f46;--pg:#d6ece3;--py:#f4e4b6;--dr:#ecf3ee;--gold:#e3a72f;--red:#c0392b;--hero:#0b3d33}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1614;--card:#17211e;--tx:#eef3ef;--mut:#9aa8a2;--bd:#26332f;--gr:#2fb58a;--on:#06251b;--grd:#5fd3ab;--pg:#173328;--py:#3a3114;--dr:#131d1a;--hero:#0b2a24}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.5 "Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px)}
+.hz{font-family:"Noto Serif SC","Songti SC",serif;font-weight:900}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+svg.i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0px)}
+.bar{height:66px;display:flex;align-items:center;gap:12px}
+.logo{position:relative;width:44px;height:44px;border-radius:12px;background:var(--gr);color:var(--on);display:grid;place-items:center;font-size:24px;overflow:hidden;flex:none}
+.logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--card)}
+.word{font-size:24px;font-weight:800;letter-spacing:-.5px;flex:1}.word b{color:var(--red)}.word span{color:var(--gr)}
+.links{display:none;gap:6px;align-items:center}.links a{color:var(--tx);text-decoration:none;font-weight:700;padding:8px 12px;border-radius:99px}.links a:hover{background:var(--pg)}
+.burger{background:none;border:0;color:var(--tx);padding:8px;cursor:pointer}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gr);color:var(--on);font:inherit;font-weight:700;border:0;border-radius:99px;padding:13px 24px;text-decoration:none;cursor:pointer}
+.pill.gold{background:var(--gold);color:#2b1d00}.pill.out{background:transparent;color:var(--gr);border:2px solid var(--gr)}.pill.wh{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+main{padding:20px 0 40px;display:grid;gap:30px}
+.warn{display:none;background:var(--py);border-radius:16px;padding:12px 16px;font-size:15px}
+.hero{background:linear-gradient(150deg,var(--hero),#116b52);color:#fff;border-radius:28px;padding:26px 22px;display:grid;gap:24px;position:relative;overflow:hidden}
+.hero .big{position:absolute;right:-20px;bottom:-60px;font-size:300px;line-height:1;opacity:.06;pointer-events:none}
+.hero .logo{width:72px;height:72px;font-size:40px;border-radius:20px;margin-bottom:16px}
+.hero h1{margin:0 0 12px;font-size:32px;line-height:1.12;font-weight:800;letter-spacing:-.5px}
+.hero p.lead{margin:0;opacity:.9;max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.vn{margin:12px 0 0;opacity:.75;font-size:14px}
+.stats{display:flex;gap:22px;margin-top:22px}.stats b{display:block;font-size:20px}.stats span{font-size:13px;opacity:.75}
+.entry{position:relative;background:var(--card);color:var(--tx);border-radius:22px;padding:20px 22px;max-width:320px;box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.entry small{color:var(--mut);font-weight:700}.entry .hz{display:block;font-size:76px;line-height:1.1}
+.entry .py{color:var(--gr);font-size:21px;font-weight:700;margin:0}.entry p{margin:6px 0 0;color:var(--mut);font-size:15px}
+.sec{margin:0 0 14px;font-size:26px;font-weight:800;letter-spacing:-.4px}
+.fgrid,.igrid{display:grid;gap:20px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:24px;overflow:hidden}
+.fh{height:190px;position:relative;display:flex;align-items:flex-end;padding:18px 20px;color:#fff;overflow:hidden}
+.fh .hz{position:absolute;right:-6px;top:-12px;font-size:170px;line-height:1;opacity:.2}
+.fh h3{position:relative;margin:0;font-size:34px;font-weight:800;line-height:1.05;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.c1{background:linear-gradient(155deg,#e08a2e,#8a3d12)}.c2{background:linear-gradient(155deg,#18977f,#0a3f45)}
+.c3{background:linear-gradient(155deg,#5b6fd6,#1f2760)}.c4{background:linear-gradient(155deg,#b8527e,#4a1738)}
+.strip{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px}
+.strip span{color:var(--mut);font-size:15px;line-height:1.35}
+.tag{flex:none;background:var(--pg);color:var(--grd);border-radius:99px;padding:6px 14px;font-weight:700;font-size:14px}
+.box{padding:22px}.box h3{margin:0 0 12px;font-size:22px;font-weight:800}
+.box ul{margin:0;padding-left:20px;color:var(--mut)}.box li{margin:5px 0}
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;align-items:start;margin:12px 0}
+ol.steps li:before{content:counter(s);width:30px;height:30px;border-radius:50%;background:var(--pg);color:var(--grd);font-weight:800;display:grid;place-items:center}
+.ver{padding:12px 0;border-top:1px solid var(--bd)}.ver:first-child{border-top:0;padding-top:0}.ver b{display:block}.ver p{margin:0;color:var(--mut);font-size:15px}
+.don{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--py);border-radius:18px;padding:14px 16px;margin-top:14px}
+.don small{display:block;color:var(--mut)}.don b{font-size:21px}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+footer{border-top:1px solid var(--bd);padding:26px 16px 36px;text-align:center;color:var(--mut);font-size:14px}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(88vw,360px);background:var(--dr);z-index:10;transform:translateX(102%);transition:transform .25s;overflow-y:auto;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+body.open .scrim{opacity:1;pointer-events:auto}body.open .drawer{transform:none}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:20px 20px 16px;border-bottom:1px solid var(--bd);font-size:24px;font-weight:800}
+.dh button{background:none;border:0;color:var(--tx);padding:6px;cursor:pointer}
+.nav{padding:12px}.nav a.m{display:flex;align-items:center;gap:16px;padding:15px 16px;border-radius:18px;color:var(--tx);text-decoration:none;font-weight:700;font-size:19px}
+.nav a.y{background:var(--py)}.nav a.g{background:var(--pg)}
+.nav h4{margin:18px 16px 4px;font-size:14px;font-weight:700;color:var(--mut)}
+.nav .pill{display:flex;width:100%;margin-top:10px}
+@media (min-width:720px){.fgrid{grid-template-columns:1fr 1fr}.hero h1{font-size:42px}}
+@media (min-width:860px){
+ .burger,.drawer,.scrim{display:none}.links{display:flex}.wrap{padding:0 28px}
+ .hero{grid-template-columns:1.2fr 1fr;align-items:center;padding:52px 48px;gap:40px;border-radius:36px}
+ .hero h1{font-size:48px}.entry{justify-self:center;transform:rotate(-3deg);max-width:340px}
+ .igrid{grid-template-columns:1fr 1fr}.igrid .wide{grid-column:1/-1}
+ main{gap:44px;padding-top:28px}.fh{height:230px}.fh h3{font-size:40px}
+}
+@media (prefers-reduced-motion:reduce){.drawer,.scrim{transition:none}}
 </style>
 </head>
 <body>
-<main>
-<div class="hero">
-  <div class="logo">贺</div>
-  <h1>贺辛 DC · Dico Lingua</h1>
-  <p class="sub">Dictionnaire chinois · français · malgache</p>
-  <span class="badge" id="badge"></span>
-  <a class="btn" id="dl" href="#" target="_blank" rel="noopener">⬇ Télécharger l’application (APK)</a>
-</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="dl" viewBox="0 0 24 24"><path d="M12 4v10m0 0l-4-4m4 4l4-4M5 19h14"/></symbol>
+<symbol id="bk" viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 013 3v13H8a3 3 0 01-3-3zM5 17a3 3 0 013-3h10"/></symbol>
+<symbol id="ls" viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+<symbol id="ck" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></symbol>
+<symbol id="ht" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.4A4 4 0 0119 10c0 5.600-7 10-7 10z"/></symbol>
+<symbol id="ch" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="mn" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</defs></svg>
 
-<div class="warn" id="fb">Tu es dans le navigateur de Facebook. Pour télécharger l’APK, ouvre cette page dans ton navigateur (menu ⋮ ou ··· puis « Ouvrir dans le navigateur »).</div>
+<header><div class="wrap bar">
+  <div class="logo hz" lang="zh">贺<img src="logo.png" alt="Logo 贺辛 DC" onerror="this.remove()"></div>
+  <div class="word"><b>贺辛</b> <span>DC</span></div>
+  <nav class="links" aria-label="Navigation">
+    <a href="#fonctions">Fonctions</a><a href="#installer">Installation</a><a href="#versions">Versions</a><a href="#soutenir">Soutenir</a><a href="#contact">Contact</a>
+    <a class="pill" href="#telecharger" style="color:var(--on)">Télécharger</a>
+  </nav>
+  <button class="burger" id="open" aria-label="Ouvrir le menu" aria-expanded="false"><svg class="i" style="width:30px;height:30px"><use href="#mn"/></svg></button>
+</div></header>
 
-<section>
-  <h2>Ce que tu peux faire</h2>
-  <div class="grid">
-    <div class="card"><b>📚 Dictionnaire</b><span>Hanzi, pinyin, français, malgache, niveaux HSK 1 à 6</span></div>
-    <div class="card"><b>🌅 Mot du jour</b><span>Un nouveau mot chaque jour</span></div>
-    <div class="card"><b>⭐ Favoris</b><span>Favoris, historique et listes personnelles</span></div>
-    <div class="card"><b>🧩 Thèmes</b><span>Vocabulaire classé par thèmes</span></div>
-    <div class="card"><b>📖 Grammaire</b><span>Grammaire, chiffres et classificateurs</span></div>
-    <div class="card"><b>💬 Phrases</b><span>Exemples et phrases utiles</span></div>
-    <div class="card"><b>📝 Quiz & révision</b><span>Teste-toi et révise ce que tu as appris</span></div>
-    <div class="card"><b>🎧 Shadowing</b><span>Écoute et répète avec la voix chinoise</span></div>
-    <div class="card"><b>📊 Statistiques</b><span>Progression par niveau et jours de suite</span></div>
-    <div class="card"><b>🎨 Apparence</b><span>Clair, sombre et 5 couleurs d’accent</span></div>
+<div class="scrim" id="scrim"></div>
+<nav class="drawer" id="drawer" aria-label="Menu">
+  <div class="dh">贺辛 DC<button id="close" aria-label="Fermer le menu"><svg class="i" style="width:30px;height:30px"><use href="#x"/></svg></button></div>
+  <div class="nav">
+    <a class="m" href="#telecharger"><svg class="i" style="color:var(--gr)"><use href="#dl"/></svg>Télécharger l’app</a>
+    <a class="m" href="#fonctions"><svg class="i"><use href="#bk"/></svg>Fonctions</a>
+    <a class="m" href="#installer"><svg class="i"><use href="#ls"/></svg>Installation</a>
+    <a class="m" href="#versions"><svg class="i"><use href="#ck"/></svg>Versions</a>
+    <a class="m y" href="#soutenir"><svg class="i"><use href="#ht"/></svg>Soutenir le projet</a>
+    <a class="m g" href="#contact"><svg class="i"><use href="#ch"/></svg>Contact</a>
+    <h4>Pages officielles</h4>
+    <a class="m" href="https://www.facebook.com/HASINANT" target="_blank" rel="noopener">Facebook</a>
+    <a class="m" href="https://wa.me/261333665708" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="pill" href="#telecharger">Télécharger l’APK</a>
   </div>
-</section>
+</nav>
 
-<section>
-  <h2>Installation</h2>
-  <div class="card"><ol>
-    <li>Appuie sur « Télécharger » puis ouvre le fichier APK.</li>
-    <li>Si Android le demande, autorise l’installation depuis cette source (« Sources inconnues »).</li>
-    <li>Appuie sur « Installer » puis ouvre l’application.</li>
-  </ol></div>
-</section>
+<main class="wrap">
+  <div class="warn" id="fb">Tu es dans le navigateur de Facebook. Pour télécharger l’APK, ouvre cette page dans ton navigateur : menu ⋮ ou ···, puis « Ouvrir dans le navigateur ».</div>
 
-<section>
-  <h2>Mises à jour</h2>
-  <div class="card" id="log"></div>
-</section>
+  <section class="hero" id="telecharger">
+    <span class="hz big" lang="zh" aria-hidden="true">贺辛</span>
+    <div style="position:relative">
+      <div class="logo hz" lang="zh">贺<img src="logo.png" alt="" onerror="this.remove()"></div>
+      <h1>Apprends le chinois avec le français et le malgache</h1>
+      <p class="lead">Un dictionnaire pour Android, avec les niveaux HSK 1 à 6, un quiz, de la révision et des exercices de prononciation.</p>
+      <div class="cta">
+        <a class="pill gold" id="dl" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#dl"/></svg>Télécharger</a>
+        <a class="pill wh" href="#fonctions">Voir les fonctions</a>
+      </div>
+      <p class="vn" id="vn"></p>
+      <div class="stats"><div><b>HSK 1 à 6</b><span>niveaux</span></div><div><b>3 langues</b><span>chinois, français, malgache</span></div><div><b>Gratuit</b><span>pour tous</span></div></div>
+    </div>
+    <div class="entry" aria-hidden="true" style="position:relative">
+      <small>Mot du jour</small><span class="hz" lang="zh">词典</span><p class="py">cídiǎn</p>
+      <p>nom<br>Français : dictionnaire<br>Malgache : rakibolana</p>
+    </div>
+  </section>
 
-<section>
-  <h2>❤ Soutenir le projet</h2>
-  <div class="card">
-    <p style="margin:0 0 6px">L’application est gratuite. Si elle t’aide, tu peux soutenir son développement :</p>
-    <div id="don"></div>
-  </div>
-</section>
+  <section id="fonctions">
+    <h2 class="sec">Ce que tu trouves dans l’application</h2>
+    <div class="fgrid">
+      <div class="card"><div class="fh c1"><span class="hz" lang="zh">词典</span><h3>Dictionnaire</h3></div>
+        <div class="strip"><span>Hanzi, pinyin, français et malgache, par niveau et par thème.</span><span class="tag">HSK 1 à 6</span></div></div>
+      <div class="card"><div class="fh c2"><span class="hz" lang="zh">语法</span><h3>Grammaire</h3></div>
+        <div class="strip"><span>Les règles essentielles, les chiffres et les classificateurs.</span><span class="tag">Leçons</span></div></div>
+      <div class="card"><div class="fh c3"><span class="hz" lang="zh">测验</span><h3>Quiz et révision</h3></div>
+        <div class="strip"><span>Teste-toi, puis revois les mots que tu as oubliés.</span><span class="tag">Quiz</span></div></div>
+      <div class="card"><div class="fh c4"><span class="hz" lang="zh">跟读</span><h3>Shadowing</h3></div>
+        <div class="strip"><span>Écoute la voix chinoise et répète pour la prononciation.</span><span class="tag">Audio</span></div></div>
+    </div>
+  </section>
 
-<section>
-  <h2>Contact</h2>
-  <a class="btn alt" style="margin-top:0" href="https://wa.me/261333665708" target="_blank" rel="noopener">WhatsApp</a>
-  <a class="btn alt" href="https://www.facebook.com/HASINANT" target="_blank" rel="noopener">Page Facebook</a>
-</section>
-
-<footer>© 贺辛 DC — Merci d’utiliser l’application !</footer>
+  <section class="igrid">
+    <div class="card box"><h3>Aussi dans l’application</h3>
+      <ul><li>Mot du jour et phrases d’exemple</li><li>Favoris, historique et listes personnelles</li><li>Statistiques de progression par niveau</li><li>Mode clair ou sombre, 5 couleurs d’accent</li></ul></div>
+    <div class="card box" id="installer"><h3>Installer l’APK</h3>
+      <ol class="steps">
+        <li><span>Appuie sur « Télécharger » et attends la fin du téléchargement.</span></li>
+        <li><span>Ouvre le fichier. Si Android le demande, autorise l’installation depuis cette source.</span></li>
+        <li><span>Appuie sur « Installer », puis ouvre l’application.</span></li>
+      </ol></div>
+    <div class="card box" id="versions"><h3>Historique des versions</h3><div id="log"></div></div>
+    <div class="card box" id="soutenir"><h3>Soutenir le projet</h3>
+      <p style="margin:0;color:var(--mut)">L’application est gratuite. Un don aide à la faire évoluer.</p><div id="don"></div></div>
+    <div class="card box wide" id="contact"><h3>Contact</h3>
+      <div class="row">
+        <a class="pill" href="https://wa.me/261333665708" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="pill out" href="https://www.facebook.com/HASINANT" target="_blank" rel="noopener">Page Facebook</a>
+      </div></div>
+  </section>
 </main>
+<footer>贺辛 DC, un dictionnaire fait pour les apprenants.</footer>
 
 <script>
 /* ====== À MODIFIER ====== */
 const CONFIG = {
-  apkUrl: "#",  /* lien de téléchargement Google Drive (voir explications) */
+  apkUrl: "#",   /* lien de téléchargement de l'APK */
   version: "2.2.0",
-  taille: "",   /* ex. "12 Mo" (optionnel) */
+  taille: "",    /* ex. "12 Mo" (optionnel) */
   mises_a_jour: [
     {v: "2.2.0", date: "27/11/2026", notes: "Version actuelle."}
-    /* Ajoute une ligne ici à chaque nouvelle version, la plus récente en premier */
+    /* Ajoute une ligne à chaque nouvelle version, la plus récente en premier */
   ],
   dons: [
-    {nom: "Airtel Money", num: "033 366 5708"}  /* ajoute ton numéro entre les guillemets */
+    {nom: "Airtel Money", num: "033 366 5708"}
   ]
 };
 /* ======================== */
 
 const dl = document.getElementById("dl");
 if (CONFIG.apkUrl && CONFIG.apkUrl !== "#") { dl.href = CONFIG.apkUrl; }
-else { dl.removeAttribute("href"); dl.textContent = "Téléchargement bientôt disponible"; dl.style.opacity = ".55"; dl.style.pointerEvents = "none"; }
-document.getElementById("badge").textContent = "Version " + CONFIG.version + (CONFIG.taille ? " · " + CONFIG.taille : "");
+else { dl.removeAttribute("href"); dl.lastChild.textContent = "Bientôt disponible"; dl.style.opacity = ".7"; dl.style.pointerEvents = "none"; }
+document.getElementById("vn").textContent = "Version " + CONFIG.version + (CONFIG.taille ? ", " + CONFIG.taille : "") + ", fichier APK pour Android.";
 if (/FBAN|FBAV|FB_IAB/i.test(navigator.userAgent)) document.getElementById("fb").style.display = "block";
 
 const log = document.getElementById("log");
-CONFIG.mises_a_jour.forEach(function(m, i){
-  const d = document.createElement("div");
-  if (i) d.style.cssText = "margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)";
-  d.innerHTML = '<p class="ver"></p><p class="notes"></p>';
-  d.children[0].textContent = "Version " + m.v + " — " + m.date;
+CONFIG.mises_a_jour.forEach(function(m){
+  const d = document.createElement("div"); d.className = "ver";
+  d.innerHTML = "<b></b><p></p>";
+  d.children[0].textContent = "Version " + m.v + ", " + m.date;
   d.children[1].textContent = m.notes;
   log.appendChild(d);
 });
 
 const don = document.getElementById("don");
 CONFIG.dons.forEach(function(x){
-  const r = document.createElement("div");
-  r.className = "row";
-  r.innerHTML = '<div><b></b><small></small></div><button type="button">Copier</button>';
-  r.querySelector("b").textContent = x.nom;
-  r.querySelector("small").textContent = x.num || "Numéro bientôt disponible";
-  if (!x.num) { r.querySelector("button").remove(); don.appendChild(r); return; }
-  r.querySelector("button").onclick = function(e){
-    const b = e.target;
-    function ok(){ b.textContent = "Copié ✓"; setTimeout(function(){ b.textContent = "Copier"; }, 1500); }
-    try { navigator.clipboard.writeText(x.num).then(ok, ok); } catch (err) { ok(); }
+  const r = document.createElement("div"); r.className = "don";
+  r.innerHTML = '<div><small></small><b></b></div><button class="pill" type="button">Copier</button>';
+  r.querySelector("small").textContent = x.nom;
+  r.querySelector("b").textContent = x.num || "Numéro bientôt disponible";
+  const b = r.querySelector("button");
+  if (!x.num) { b.remove(); }
+  else b.onclick = function(){
+    function ok(){ b.textContent = "Copié"; setTimeout(function(){ b.textContent = "Copier"; }, 1500); }
+    try { navigator.clipboard.writeText(x.num).then(ok, ok); } catch (e) { ok(); }
   };
   don.appendChild(r);
 });
+
+const body = document.body, openB = document.getElementById("open");
+function toggle(o){ body.classList.toggle("open", o); openB.setAttribute("aria-expanded", o); }
+openB.onclick = function(){ toggle(true); };
+document.getElementById("close").onclick = document.getElementById("scrim").onclick = function(){ toggle(false); };
+document.querySelectorAll(".drawer a").forEach(function(a){ a.addEventListener("click", function(){ toggle(false); }); });
+document.addEventListener("keydown", function(e){ if (e.key === "Escape") toggle(false); });
 </script>
 </body>
 </html>
