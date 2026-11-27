@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>贺辛 DC · Dico Lingua — Télécharger</title>
+<meta name="robots" content="noindex">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#faf7f2;--card:#fff;--tx:#1f1b16;--mut:#6b645a;--ac:#c8352b;--ac2:#fbe9e7;--bd:#e8e1d6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15130f;--card:#201d18;--tx:#f3eee6;--mut:#a39b8d;--ac:#ef6a5e;--ac2:#3a2420;--bd:#332f28}}
+:root[data-theme="dark"]{--bg:#15130f;--card:#201d18;--tx:#f3eee6;--mut:#a39b8d;--ac:#ef6a5e;--ac2:#3a2420;--bd:#332f28}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+.hero{text-align:center;padding:28px 8px 8px}
+.logo{width:84px;height:84px;margin:0 auto 14px;border-radius:22px;background:var(--ac);color:#fff;display:grid;place-items:center;font-size:44px;font-weight:700}
+h1{margin:0;font-size:26px}.sub{color:var(--mut);margin:6px 0 0}
+.badge{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:99px;background:var(--ac2);color:var(--ac);font-size:13px;font-weight:600}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:700;padding:15px 18px;border-radius:14px;margin-top:18px;background:var(--ac);color:#fff;font-size:17px}
+.btn.alt{background:transparent;color:var(--ac);border:2px solid var(--ac)}
+section{margin-top:26px}h2{font-size:19px;margin:0 0 10px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid .card{padding:12px}.grid b{display:block}.grid span{color:var(--mut);font-size:14px}
+ol{margin:0;padding-left:20px}li{margin:6px 0}
+.warn{display:none;background:#fff3cd;color:#5c4400;border-radius:12px;padding:12px 14px;margin-top:16px;font-size:14px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--bd)}
+.row:first-of-type{border-top:0}.row small{color:var(--mut);display:block}
+.row button{border:1px solid var(--ac);background:transparent;color:var(--ac);border-radius:10px;padding:7px 12px;font-weight:600;cursor:pointer}
+.ver{margin:0 0 4px;font-weight:700}.notes{color:var(--mut);margin:0;font-size:15px}
+footer{text-align:center;color:var(--mut);font-size:13px;margin-top:34px}
+</style>
+</head>
+<body>
+<main>
+<div class="hero">
+  <div class="logo">贺</div>
+  <h1>贺辛 DC · Dico Lingua</h1>
+  <p class="sub">Dictionnaire chinois · français · malgache</p>
+  <span class="badge" id="badge"></span>
+  <a class="btn" id="dl" href="#" target="_blank" rel="noopener">⬇ Télécharger l’application (APK)</a>
+</div>
+
+<div class="warn" id="fb">Tu es dans le navigateur de Facebook. Pour télécharger l’APK, ouvre cette page dans ton navigateur (menu ⋮ ou ··· puis « Ouvrir dans le navigateur »).</div>
+
+<section>
+  <h2>Ce que tu peux faire</h2>
+  <div class="grid">
+    <div class="card"><b>📚 Dictionnaire</b><span>Hanzi, pinyin, français, malgache, niveaux HSK 1 à 6</span></div>
+    <div class="card"><b>🌅 Mot du jour</b><span>Un nouveau mot chaque jour</span></div>
+    <div class="card"><b>⭐ Favoris</b><span>Favoris, historique et listes personnelles</span></div>
+    <div class="card"><b>🧩 Thèmes</b><span>Vocabulaire classé par thèmes</span></div>
+    <div class="card"><b>📖 Grammaire</b><span>Grammaire, chiffres et classificateurs</span></div>
+    <div class="card"><b>💬 Phrases</b><span>Exemples et phrases utiles</span></div>
+    <div class="card"><b>📝 Quiz & révision</b><span>Teste-toi et révise ce que tu as appris</span></div>
+    <div class="card"><b>🎧 Shadowing</b><span>Écoute et répète avec la voix chinoise</span></div>
+    <div class="card"><b>📊 Statistiques</b><span>Progression par niveau et jours de suite</span></div>
+    <div class="card"><b>🎨 Apparence</b><span>Clair, sombre et 5 couleurs d’accent</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Installation</h2>
+  <div class="card"><ol>
+    <li>Appuie sur « Télécharger » puis ouvre le fichier APK.</li>
+    <li>Si Android le demande, autorise l’installation depuis cette source (« Sources inconnues »).</li>
+    <li>Appuie sur « Installer » puis ouvre l’application.</li>
+  </ol></div>
+</section>
+
+<section>
+  <h2>Mises à jour</h2>
+  <div class="card" id="log"></div>
+</section>
+
+<section>
+  <h2>❤ Soutenir le projet</h2>
+  <div class="card">
+    <p style="margin:0 0 6px">L’application est gratuite. Si elle t’aide, tu peux soutenir son développement :</p>
+    <div id="don"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <a class="btn alt" style="margin-top:0" href="https://wa.me/261333665708" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn alt" href="https://www.facebook.com/HASINANT" target="_blank" rel="noopener">Page Facebook</a>
+</section>
+
+<footer>© 贺辛 DC — Merci d’utiliser l’application !</footer>
+</main>
+
+<script>
+/* ====== À MODIFIER ====== */
+const CONFIG = {
+  apkUrl: "#",  /* lien de téléchargement Google Drive (voir explications) */
+  version: "2.2.0",
+  taille: "",   /* ex. "12 Mo" (optionnel) */
+  mises_a_jour: [
+    {v: "2.2.0", date: "27/11/2026", notes: "Version actuelle."}
+    /* Ajoute une ligne ici à chaque nouvelle version, la plus récente en premier */
+  ],
+  dons: [
+    {nom: "Airtel Money", num: "033 366 5708"}  /* ajoute ton numéro entre les guillemets */
+  ]
+};
+/* ======================== */
+
+const dl = document.getElementById("dl");
+if (CONFIG.apkUrl && CONFIG.apkUrl !== "#") { dl.href = CONFIG.apkUrl; }
+else { dl.removeAttribute("href"); dl.textContent = "Téléchargement bientôt disponible"; dl.style.opacity = ".55"; dl.style.pointerEvents = "none"; }
+document.getElementById("badge").textContent = "Version " + CONFIG.version + (CONFIG.taille ? " · " + CONFIG.taille : "");
+if (/FBAN|FBAV|FB_IAB/i.test(navigator.userAgent)) document.getElementById("fb").style.display = "block";
+
+const log = document.getElementById("log");
+CONFIG.mises_a_jour.forEach(function(m, i){
+  const d = document.createElement("div");
+  if (i) d.style.cssText = "margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)";
+  d.innerHTML = '<p class="ver"></p><p class="notes"></p>';
+  d.children[0].textContent = "Version " + m.v + " — " + m.date;
+  d.children[1].textContent = m.notes;
+  log.appendChild(d);
+});
+
+const don = document.getElementById("don");
+CONFIG.dons.forEach(function(x){
+  const r = document.createElement("div");
+  r.className = "row";
+  r.innerHTML = '<div><b></b><small></small></div><button type="button">Copier</button>';
+  r.querySelector("b").textContent = x.nom;
+  r.querySelector("small").textContent = x.num || "Numéro bientôt disponible";
+  if (!x.num) { r.querySelector("button").remove(); don.appendChild(r); return; }
+  r.querySelector("button").onclick = function(e){
+    const b = e.target;
+    function ok(){ b.textContent = "Copié ✓"; setTimeout(function(){ b.textContent = "Copier"; }, 1500); }
+    try { navigator.clipboard.writeText(x.num).then(ok, ok); } catch (err) { ok(); }
+  };
+  don.appendChild(r);
+});
+</script>
+</body>
+</html>
