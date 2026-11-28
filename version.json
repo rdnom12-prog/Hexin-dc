@@ -1,9 +1,13 @@
 {
   "version": "2.2.0",
-  "apk": "",
+  "apk": "https://drive.google.com/uc?export=download&id=1HpVAnpGsFpDMQktbBww98asMXRCWQqCw",
   "taille": "",
   "captures": [],
   "historique": [
-    { "v": "2.2.0", "date": "27/11/2026", "fr": "Version actuelle.", "mg": "Version ankehitriny." }
+    {
+      "v": "2.2.0",
+      "date": "27/11/2026",
+      "fr": "Version actuelle."
+    }
   ]
 }
